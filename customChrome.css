@@ -1,6 +1,21 @@
 /* Custom CSS for userChrome.css */
+@import url("./edge-frfox/chrome/userChrome.css");
+@import url("./fluent/mica.css");
 
 :root {
 	--uwp-accent-color: -moz-accent-color; /* Accent color */
 	--uwp-accent-text: -moz-accent-color-foreground; /* Accent color text */
+}
+
+#urlbar-input-container {
+	border-radius: 5px !important;
+}
+
+#urlbar-input-container:hover {
+	background-color: transparent !important;
+}
+
+#urlbar-background {
+	border: 1px solid #e0e0e0de;
+	border-radius: 5px;
 }

@@ -1,6 +1,6 @@
-@media (-moz-windows-compositor) {
+/*@media (-moz-windows-compositor) {
 	/* Titlebar */
-	.titlebar-button {
+	/*.titlebar-button {
 		width: 46px !important;
 		height: 32px !important;
 		stroke: var(--uwp-titlebar) !important;
@@ -49,7 +49,7 @@
 }
 /* Window */
 /* Temporal fix for top border */
-@media (-moz-windows-compositor) {
+/*@media (-moz-windows-compositor) {
 	#main-window {
 		background-color: var(--uwp-mainwindow) !important;
 	}
@@ -57,14 +57,13 @@
 :root:not([tabsintitlebar]) #main-window {
 	background-color: var(--uwp-mainwindow) !important;
 }
-/*
 #main-window[chromemargin] {
 	background-color: var(--uwp-mainwindow) !important;
 	-moz-appearance: -moz-win-glass !important;
-}
+}*/
 #main-window[sizemode="normal"][tabsintitlebar="true"] {
 	margin-top: 1px !important;
-}*/
+}
 /* Tabs */
 .toolbar-items > spacer:first-of-type {
 	display: none !important;
@@ -76,7 +75,7 @@
 	--tab-line-color: -moz-accent-color !important;
 	--tab-loading-fill: -moz-accent-color !important;
 }
-.tabbrowser-tab {
+/*.tabbrowser-tab {
 	padding: 0px !important;
 }
 
@@ -105,7 +104,7 @@
 		border: var(--uwp-button-border-active) !important;
 	}
 	/* Toolbar buttons */
-	.toolbar-items .toolbarbutton-1 {
+	/*.toolbar-items .toolbarbutton-1 {
 		color: var(--uwp-button-color) !important;
 		background-color: var(--uwp-button-background) !important;
 		border: var(--uwp-button-border) !important;
@@ -158,7 +157,7 @@
 		margin-right: 0px !important;
 	}
 	/* Toolbar buttons */
-	.toolbar-items .toolbarbutton-1 {
+	/*.toolbar-items .toolbarbutton-1 {
 		margin-bottom: 0px !important;
 	}
 	.toolbar-items .toolbarbutton-1:hover {
@@ -167,7 +166,7 @@
 	.toolbar-items .toolbarbutton-1:hover:active {
 		background: var(--uwp-tabbar-button-hover-active) !important;
 	}
-}
+}*/
 .tab-icon-overlay {
 	opacity: 1 !important;
 	left: 4px !important;
@@ -206,12 +205,12 @@
 #TabsToolbar {
 	color: var(--uwp-global-front) !important;
 }
-.toolbar-items .toolbarbutton-1 > .toolbarbutton-icon {
+/*.toolbar-items .toolbarbutton-1 > .toolbarbutton-icon {
 	background: none !important;
 }
 toolbarbutton.subviewbutton {
 	box-shadow: none !important;
-}
+}*/
 #PlacesToolbar .bookmark-item {
 	padding: 4px !important;
 }
@@ -222,22 +221,22 @@ toolbarbutton.subviewbutton {
 	-moz-appearance: none !important;
 	padding: 0px !important;
 }
-toolbarbutton.close-icon {
+/*toolbarbutton.close-icon {
 	border-radius: var(--uwp-tags-control-radius) !important;
-}
+}*/
 /* navbar stuff */
 #nav-bar {
 	box-shadow: none !important;
 }
 #content-deck, #browser {
-	/*-moz-appearance: -moz-win-exclude-glass !important;*/
+	-moz-appearance: -moz-win-exclude-glass !important;
 }
 #navigator-toolbox, #navigator-toolbox::after {
 	border-bottom: 0px !important;
 }
-#navigator-toolbox-background {
+/*#navigator-toolbox-background {
 	background: var(--uwp-browser) !important;
-}
+}*/
 @supports -moz-bool-pref("privacy.resistFingerprinting.letterboxing") {
 	#navigator-toolbox {
 		margin-bottom: var(--uwp-navbar-letterbox) !important;
@@ -246,7 +245,7 @@ toolbarbutton.close-icon {
 		margin-bottom: var(--uwp-navbar-letterbox-bookmarks) !important;
 	}
 }
-@media (-moz-windows-compositor) {
+/*@media (-moz-windows-compositor) {
 	#navigator-toolbox {
 		background: var(--uwp-mainwindow) !important;
 	}
@@ -261,13 +260,13 @@ toolbarbutton.close-icon {
 }
 #browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, browser[type=content-primary], browser[type=content] > html {
 	background: var(--uwp-browser) !important;
-}
+}*/
 #tracking-protection-icon-container, #identity-box {
 	border: none !important;
 }
-#identity-box[pageproxystate="valid"]  .identity-box-button {
+/*#identity-box[pageproxystate="valid"]  .identity-box-button {
 	background: transparent !important;
-}
+}*/
 /* Findbar */
 .findbar-find-previous, .findbar-find-next {
 	border: none !important;
@@ -726,13 +725,13 @@ notification {
 		margin: 0px 0px 2px 2px !important;
 	}
 }
-/*@supports(backdrop-filter: blur(1px)) {
+@supports(backdrop-filter: blur(1px)) {
 	#fullscreen-warning {
 		background-image: var(--uwp-acrylic-noise) !important;
 		background-color: var(--uwp-context-background-blur) !important;
 		backdrop-filter: var(--uwp-acrylic-backdrop) !important;
 	}
-}*/
+}
 .ctrlTab-preview > .ctrlTab-preview-inner, #ctrlTab-showAll {
 	border: 2px solid transparent !important;
 	background: transparent !important;
