@@ -49,7 +49,7 @@
 }
 /* Window */
 /* Temporal fix for top border */
-/*@media (-moz-windows-compositor) {
+@media (-moz-windows-compositor) {
 	#main-window {
 		background-color: var(--uwp-mainwindow) !important;
 	}
@@ -60,7 +60,7 @@
 #main-window[chromemargin] {
 	background-color: var(--uwp-mainwindow) !important;
 	-moz-appearance: -moz-win-glass !important;
-}*/
+}
 #main-window[sizemode="normal"][tabsintitlebar="true"] {
 	margin-top: 1px !important;
 }
@@ -229,11 +229,11 @@ toolbarbutton.subviewbutton {
 	box-shadow: none !important;
 }
 #content-deck, #browser {
-	-moz-appearance: -moz-win-exclude-glass !important;
+	/*-moz-appearance: -moz-win-exclude-glass !important;*/
 }
-#navigator-toolbox, #navigator-toolbox::after {
+/*#navigator-toolbox, #navigator-toolbox::after {
 	border-bottom: 0px !important;
-}
+}*/
 /*#navigator-toolbox-background {
 	background: var(--uwp-browser) !important;
 }*/
@@ -264,9 +264,9 @@ toolbarbutton.subviewbutton {
 #tracking-protection-icon-container, #identity-box {
 	border: none !important;
 }
-/*#identity-box[pageproxystate="valid"]  .identity-box-button {
+#identity-box[pageproxystate="valid"]  .identity-box-button {
 	background: transparent !important;
-}*/
+}
 /* Findbar */
 .findbar-find-previous, .findbar-find-next {
 	border: none !important;
@@ -725,13 +725,13 @@ notification {
 		margin: 0px 0px 2px 2px !important;
 	}
 }
-@supports(backdrop-filter: blur(1px)) {
+/*@supports(backdrop-filter: blur(1px)) {
 	#fullscreen-warning {
 		background-image: var(--uwp-acrylic-noise) !important;
 		background-color: var(--uwp-context-background-blur) !important;
 		backdrop-filter: var(--uwp-acrylic-backdrop) !important;
 	}
-}
+}*/
 .ctrlTab-preview > .ctrlTab-preview-inner, #ctrlTab-showAll {
 	border: 2px solid transparent !important;
 	background: transparent !important;

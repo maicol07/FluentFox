@@ -117,7 +117,7 @@
 
 		--uwp-progress-bar-paused: var(--uwp-system-caution);
 
-		/*--uwp-nav-content-background: var(--uwp-layer-fill-default);*/
+		--uwp-nav-content-background: var(--uwp-layer-fill-default);
 		--uwp-nav-content-border: 1px solid var(--uwp-card-stroke-default);
 		--uwp-nav-item-height: 36px;
 		--uwp-nav-item-selector-height: 16px;
