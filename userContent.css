@@ -2,16 +2,16 @@
 
 /* MDL2 */
 /* Pop-ups, Context Menus, Dropdowns, etc */
-/*@import url(./css/context.css);
+@import url(./css/context.css);
 
 /* Base Tags Theme */
-/*@import url(./css/tags.css);
+@import url(./css/tags.css);
 
 /* Pages */
-/*@import url(./css/pagesContent.css);
+@import url(./css/pagesContent.css);
 
 /* Styles */
-/*@import url(./css/styles/mdl2.css);
+/*@import url(./css/styles/mdl2.css);*/
 @import url(./css/styles/sun-valley.css);
 
 * {
@@ -19,5 +19,5 @@
 }
 
 /* Custom CSS for userContent.css */
-/*@import url(./customContent.css);
+@import url(./customContent.css);
 
