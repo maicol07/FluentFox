@@ -1,5 +1,5 @@
 /* Custom CSS for userContent.css */
-@import url("./fluent/micaContent.css");
+@import url("./micaFox/micaContent.css");
 
 :root {
 	--uwp-accent-color: -moz-accent-color; /* Accent color */
