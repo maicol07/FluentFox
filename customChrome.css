@@ -25,7 +25,11 @@
 	box-shadow: var(--uc-urlbar-shadow, none) !important;
 }
 
-#urlbar-input-container:not([open="true"]):hover, #searchbar:hover {
+#urlbar #urlbar-input-container:hover, #searchbar:hover {
 	background-color: var(--input-bgcolor) !important;
 	border: 1px solid var(--input-border-color) !important;
+}
+
+#urlbar[open="true"] #urlbar-input-container:hover {
+	border: 1px solid transparent !important;
 }
