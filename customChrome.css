@@ -9,15 +9,23 @@
 	--uwp-background: #f7f7f7;
 }
 
+.tab-close-button {
+	width: 20px !important;
+	height: 20px !important;
+	padding: 6px !important;
+}
+
 #urlbar-input-container {
 	border-radius: 5px !important;
 }
 
-#urlbar-input-container:hover {
-	background-color: transparent !important;
+#urlbar-background {
+	background-color: var(--input-bgcolor) !important;
+	border-radius: 5px !important;
+	box-shadow: var(--uc-urlbar-shadow, none) !important;
 }
 
-#urlbar-background {
-	border: 1px solid #e0e0e0de;
-	border-radius: 5px;
+#urlbar-input-container:not([open="true"]):hover, #searchbar:hover {
+	background-color: var(--input-bgcolor) !important;
+	border: 1px solid var(--input-border-color) !important;
 }
