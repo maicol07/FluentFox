@@ -6,7 +6,18 @@
 	--uwp-accent-color: -moz-accent-color; /* Accent color */
 	--uwp-accent-text: -moz-accent-color-foreground; /* Accent color text */
 	--uwp-mainwindow: transparent;
-	--uwp-background: #f7f7f7;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--uwp-background: #f7f7f7;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--uwp-background: #202020;
+	}
 }
 
 .tab-close-button {
