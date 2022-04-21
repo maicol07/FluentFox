@@ -1,6 +1,6 @@
-/*@media (-moz-windows-compositor) {
+@media (-moz-windows-compositor) {
 	/* Titlebar */
-	/*.titlebar-button {
+	.titlebar-button {
 		width: 46px !important;
 		height: 32px !important;
 		stroke: var(--uwp-titlebar) !important;
@@ -57,13 +57,14 @@
 :root:not([tabsintitlebar]) #main-window {
 	background-color: var(--uwp-mainwindow) !important;
 }
+/*
 #main-window[chromemargin] {
 	background-color: var(--uwp-mainwindow) !important;
 	-moz-appearance: -moz-win-glass !important;
 }
 #main-window[sizemode="normal"][tabsintitlebar="true"] {
 	margin-top: 1px !important;
-}
+}*/
 /* Tabs */
 .toolbar-items > spacer:first-of-type {
 	display: none !important;
@@ -228,15 +229,12 @@ toolbarbutton.subviewbutton {
 #nav-bar {
 	box-shadow: none !important;
 }
-#content-deck, #browser {
-	/*-moz-appearance: -moz-win-exclude-glass !important;*/
-}
-/*#navigator-toolbox, #navigator-toolbox::after {
+#navigator-toolbox, #navigator-toolbox::after {
 	border-bottom: 0px !important;
-}*/
-/*#navigator-toolbox-background {
-	background: var(--uwp-browser) !important;
-}*/
+}
+#navigator-toolbox {
+	background: transparent !important;
+}
 @supports -moz-bool-pref("privacy.resistFingerprinting.letterboxing") {
 	#navigator-toolbox {
 		margin-bottom: var(--uwp-navbar-letterbox) !important;
@@ -245,22 +243,25 @@ toolbarbutton.subviewbutton {
 		margin-bottom: var(--uwp-navbar-letterbox-bookmarks) !important;
 	}
 }
-/*@media (-moz-windows-compositor) {
-	#navigator-toolbox {
-		background: var(--uwp-mainwindow) !important;
-	}
+@media (-moz-windows-compositor) {
 	@supports -moz-bool-pref("uwp.sun-valley.round-tabs") {
-		#navigator-toolbox {
-			background: var(--uwp-background) !important;
+		@supports not -moz-bool-pref("uwp.sun-valley.mica") {
+			#navigator-toolbox-background {
+				background: var(--uwp-background) !important;
+			}
 		}
 	}
 }
-:root:not([tabsintitlebar]) #navigator-toolbox {
-	background: var(--uwp-mainwindow) !important;
-}
 #browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, browser[type=content-primary], browser[type=content] > html {
 	background: var(--uwp-browser) !important;
-}*/
+}
+/*
+@supports -moz-bool-pref("uwp.sun-valley.mica") {
+	#browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, browser[type=content-primary], browser[type=content] > html {
+		background: transparent !important;
+	}
+}
+*/
 #tracking-protection-icon-container, #identity-box {
 	border: none !important;
 }
@@ -292,20 +293,33 @@ findbar[hidden] {
 .panel-arrowbox {
 	display: none !important;
 }
-slot[part="content"]:only-child {
-	margin: var(--uwp-popup-padding) !important;
-	border: 1px solid var(--uwp-context-border) !important;
-	border-radius: var(--uwp-tags-overlay-radius) !important;
-	background: var(--uwp-context-background) !important;
-	background-clip: padding-box !important;
-	box-shadow: var(--uwp-shadow-context) !important;
-	overflow: clip !important;
+@media not (-moz-windows-compositor) {
+	.panel-arrowcontainer > slot[part="content"] {
+		margin: var(--uwp-popup-padding) !important;
+		border: 1px solid var(--uwp-context-border) !important;
+		border-radius: var(--uwp-tags-overlay-radius) !important;
+		background: var(--uwp-context-background) !important;
+		background-clip: padding-box !important;
+		box-shadow: var(--uwp-shadow-context) !important;
+		overflow: clip !important;
+	}
 }
-.panel-arrowbox + slot[part="content"] {
-	margin: 0px !important;
-	box-shadow: none !important;
-	background-clip: padding-box !important;
-	border: 1px solid var(--uwp-context-border) !important;
+@media (-moz-windows-compositor) {
+	.panel-arrowbox + slot[part="content"] {
+		margin: 0px !important;
+		box-shadow: none !important;
+		background-clip: padding-box !important;
+		border: 1px solid var(--uwp-context-border) !important;
+	}
+	slot[part="content"]:only-child {
+		margin: var(--uwp-popup-padding) !important;
+		border: 1px solid var(--uwp-context-border) !important;
+		border-radius: var(--uwp-tags-overlay-radius) !important;
+		background: var(--uwp-context-background) !important;
+		background-clip: padding-box !important;
+		box-shadow: var(--uwp-shadow-context) !important;
+		overflow: clip !important;
+	}
 }
 .panel-arrowcontent {
 	margin: 0px !important;
@@ -634,9 +648,14 @@ panel[position*="bottomleft"] {
 	fill: -moz-accent-color !important;
 }
 /* Sidebar */
+#sidebar-box {
+	background-color: transparent !important;
+}
+body[lwt-sidebar] {
+	background-color: transparent !important;
+}
 #sidebar-header {
-	background: var(--uwp-sidebar) !important;
-	color: var(--uwp-global-front) !important;
+	background: transparent !important;
 	border-bottom: none !important;
 }
 #sidebar-switcher-target:hover {
@@ -649,20 +668,15 @@ panel[position*="bottomleft"] {
 	fill: var(--uwp-global-front) !important;
 }
 #sidebar-search-container {
-	background: var(--uwp-sidebar) !important;
+	/*! background: var(--uwp-sidebar) !important; */
 }
 #sidebar-splitter {
 	border: none !important;
 }
-#sidebar-box {
-	background-color: var(--uwp-sidebar-box) !important;
-}
-body[lwt-sidebar] {
-	background-color: var(--uwp-global-back) !important;
-}
 /* Status Panel */
 #statuspanel-label {
 	background-color: var(--uwp-statuspanel) !important;
+	background-clip: padding-box !important;
 	color: var(--uwp-global-front) !important;
 	border: none !important;
 	padding: 4px !important;
@@ -828,6 +842,31 @@ notification {
 	/* Temporal fix for top border */
 	:root[sizemode="normal"][tabsintitlebar]:-moz-window-inactive {
 		border-top-color: #2B2B2B !important;
+	}
+}
+
+@supports -moz-bool-pref("uwp.sun-valley.mica") {
+	#main-window {
+		appearance: -moz-win-glass !important;
+		background: transparent !important;
+	}
+	#appcontent {
+		appearance: -moz-win-exclude-glass !important;
+	}
+	.titlebar-button {
+		width: auto !important;
+		height: auto !important;
+		opacity: 0 !important;
+	}
+	.titlebar-button:is(:hover,:active) {
+		opacity: 1 !important;
+	}
+	.titlebar-min {
+		padding: 8px 16px !important;
+		padding-bottom: 7px !important;
+	}
+	:root[sizemode="maximized"] .titlebar-close {
+		padding-right: 19px !important;
 	}
 }
 

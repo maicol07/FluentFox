@@ -8,6 +8,7 @@ This project combines three other userChromes:
 
 * [Firefox UWP style](https://github.com/Guerra24/Firefox-UWP-Style) - [README](README-uwp.md)
 * [Edge-Frfox](https://github.com/bmFtZQ/Edge-FrFox)
-* [MicaFox](https://github.com/KibSquib48/MicaFox)
 
 If you want to get the full result you should follow the setup instructions of every project and put this repo in your `chrome` folder of your Firefox profile.
+
+Currently only tested on latest Nightly
