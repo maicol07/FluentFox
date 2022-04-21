@@ -1,6 +1,5 @@
 /* Custom CSS for userChrome.css */
 @import url("./edge-frfox/chrome/userChrome.css");
-@import url("./micaFox/mica.css");
 
 :root {
 	--uwp-accent-color: -moz-accent-color; /* Accent color */
