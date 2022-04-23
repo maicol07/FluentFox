@@ -4,8 +4,7 @@
 :root {
 	--uwp-accent-color: -moz-accent-color; /* Accent color */
 	--uwp-accent-text: -moz-accent-color-foreground; /* Accent color text */
-	--uwp-background: var(--lwt-toolbar-bgcolor);
-	--uwp-browser: var(--lwt-toolbar-bgcolor);
+	--uwp-mainwindow: var(--urlbar-box-bgcolor) !important; /* Main window background */
 }
 
 .tab-close-button {
