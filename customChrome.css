@@ -31,3 +31,7 @@
 #urlbar[open="true"] #urlbar-input-container:hover {
 	border: 1px solid transparent !important;
 }
+
+#navigator-toolbox {
+	border-bottom: 1px solid var(--chrome-content-separator-color) !important;
+}
