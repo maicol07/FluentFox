@@ -35,3 +35,8 @@
 #navigator-toolbox {
 	border-bottom: 1px solid var(--chrome-content-separator-color) !important;
 }
+
+.tabbrowser-tab {
+	margin-bottom: 4px !important;
+	padding-top: 8px !important;
+}
