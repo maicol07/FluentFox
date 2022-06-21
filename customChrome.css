@@ -7,19 +7,12 @@
 	--uwp-mainwindow: var(--urlbar-box-bgcolor) !important; /* Main window background */
 }
 
-.tab-close-button {
-	width: 20px !important;
-	height: 20px !important;
-	padding: 6px !important;
-}
-
 #urlbar-input-container {
-	border-radius: 5px !important;
+	border-radius: calc(var(--toolbarbutton-border-radius) + 2px) !important;
 }
 
 #urlbar-background {
 	background-color: var(--input-bgcolor) !important;
-	border-radius: 5px !important;
 	box-shadow: var(--uc-urlbar-shadow, none) !important;
 }
 
@@ -34,9 +27,4 @@
 
 #navigator-toolbox {
 	border-bottom: 1px solid var(--chrome-content-separator-color) !important;
-}
-
-.tabbrowser-tab {
-	margin-bottom: 4px !important;
-	padding-top: 8px !important;
 }
