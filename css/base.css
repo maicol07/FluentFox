@@ -18,7 +18,7 @@
 	#main-window[sizemode="fullscreen"] #minimize-button {
 		padding-top: 8px !important;
 	}
-	.titlebar-min {
+	/*.titlebar-min {
 		padding-bottom: 7px !important;
 	}
 	.titlebar-min:hover, .titlebar-max:hover, .titlebar-restore:hover, #minimize-button:hover, #restore-button:hover {
@@ -32,7 +32,7 @@
 	}
 	.titlebar-close:hover:active, #close-button:hover:active {
 		background-color: var(--titlebar-close-active-bg-color) !important;
-	}
+	}*/
 	.titlebar-buttonbox-container, #window-controls {
 		margin-bottom: 0px !important;
 		-moz-box-align: start !important;
