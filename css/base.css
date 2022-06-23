@@ -1,6 +1,6 @@
-@media (-moz-windows-compositor) {
+/*@media (-moz-windows-compositor) {
 	/* Titlebar */
-	.titlebar-button {
+	/*.titlebar-button {
 		width: 46px !important;
 		height: 32px !important;
 		stroke: var(--uwp-titlebar) !important;
@@ -18,7 +18,7 @@
 	#main-window[sizemode="fullscreen"] #minimize-button {
 		padding-top: 8px !important;
 	}
-	/*.titlebar-min {
+	.titlebar-min {
 		padding-bottom: 7px !important;
 	}
 	.titlebar-min:hover, .titlebar-max:hover, .titlebar-restore:hover, #minimize-button:hover, #restore-button:hover {
@@ -32,7 +32,7 @@
 	}
 	.titlebar-close:hover:active, #close-button:hover:active {
 		background-color: var(--titlebar-close-active-bg-color) !important;
-	}*/
+	}
 	.titlebar-buttonbox-container, #window-controls {
 		margin-bottom: 0px !important;
 		-moz-box-align: start !important;
@@ -49,7 +49,7 @@
 }
 /* Window */
 /* Temporal fix for top border */
-@media (-moz-windows-compositor) {
+/*@media (-moz-windows-compositor) {
 	#main-window {
 		background-color: var(--uwp-mainwindow) !important;
 	}
@@ -854,7 +854,7 @@ notification {
 	}
 }
 
-@supports -moz-bool-pref("uwp.sun-valley.mica") {
+/*@supports -moz-bool-pref("uwp.sun-valley.mica") {
 	#main-window:not([sizemode="fullscreen"])  {
 		appearance: -moz-win-glass !important;
 		background: transparent !important;
