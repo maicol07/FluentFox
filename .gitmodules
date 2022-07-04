@@ -1,4 +1,4 @@
 [submodule "edge-frfox"]
 	path = edge-frfox
 	url = https://github.com/maicol07/edge-frfox
-	branch = new-rounded-tabs
+	branch = main
