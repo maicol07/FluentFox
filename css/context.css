@@ -88,10 +88,10 @@
 			background-color: color-mix(in srgb, AccentColor 60%, black) !important;
 		}
 	}
-	menupopup menuitem:hover:active, menupopup menu:hover:active, button[role="menuitem"]:hover:active, .autocomplete-richlistitem:hover:active, menupopup menuitem[selected] {
-		background-color: var(--uwp-context-item-background-active) !important;
-		border: none !important;
-	}
+	/*menupopup menuitem:hover:active, menupopup menu:hover:active, button[role="menuitem"]:hover:active, .autocomplete-richlistitem:hover:active, menupopup menuitem[selected] {*/
+	/*	background-color: var(--uwp-context-item-background-active) !important;*/
+	/*	border: none !important;*/
+	/*}*/
 	menugroup {
 		padding: 0px !important;
 		background-color: transparent !important;
