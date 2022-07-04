@@ -1,4 +1,5 @@
 /* Custom CSS for userContent.css */
+@import "edge-frfox/chrome/userContent.css";
 
 :root {
 	--uwp-accent-color: AccentColor; /* Accent color */
